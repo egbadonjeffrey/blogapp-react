@@ -4,7 +4,6 @@
     background-repeat: no-repeat;
     background-size: cover;
     height: 50vh;
-    position: relative;
   }
   
   /* BOTTOM BACKGROUND IMAGE */
@@ -14,7 +13,6 @@
     background-repeat: no-repeat;
     background-size: cover;
     height: 50vh;
-    position: relative;
   }
   
   .alignRight {
@@ -27,7 +25,6 @@
       background-repeat: no-repeat;
       background-size: cover;
       height: 50vh;
-      position: relative;
      }
   
      .aboutBodybackground {

@@ -1,10 +1,12 @@
-import "./App.css";
+import { MediumProvider } from "./context/MediumContext";
 import RouterIndex from "./utlils/RouterIndex";
 
 function App() {
   return (
     <div className="App">
-      <RouterIndex />
+      <MediumProvider>
+        <RouterIndex />
+      </MediumProvider>
     </div>
   );
 }

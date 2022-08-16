@@ -28,7 +28,7 @@ const HeroBanner = ({ backgroundImage, alignArticle }) => {
 
 const styles = {
   backgroundImage: `
-    relative
+    
   `,
 
   article: `
@@ -39,7 +39,6 @@ const styles = {
     ml-[2rem]
     px-[2rem]
     bg-white
-    absolute
   `,
 
   featuredArticle: `

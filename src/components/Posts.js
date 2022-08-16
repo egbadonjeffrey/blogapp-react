@@ -1,9 +1,9 @@
+import { useContext } from "react";
 import { Link, useParams } from "react-router-dom";
-import postThumbnail from "../images/Solana.jpeg";
-import articles from "../utlils/Data";
+import { MediumContext } from "../context/MediumContext";
 
 const Posts = () => {
-  let { id } = useParams();
+  const { articles } = useContext(MediumContext);
 
   return (
     <>
@@ -48,7 +48,8 @@ const styles = {
     `,
   postDetails: `
     flex
-    flex-row
+    flex-col
+    md:flex-row
     gap-[2rem]
     w-[100%]
     `,

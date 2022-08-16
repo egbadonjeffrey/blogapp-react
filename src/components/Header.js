@@ -32,13 +32,6 @@ const Header = () => {
 };
 
 const styles = {
-  backgroundWrapper: `
-        absolute
-        bg-[#ccc]
-        w-[100vw]
-        h-[100%]
-    `,
-
   wrapper: `
       container 
       flex 
