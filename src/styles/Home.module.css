@@ -1,0 +1,36 @@
+/* TOP BACKGROUND IMAGE */
+.topBackground {
+    background-image: url('../images/top_banner.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 50vh;
+    position: relative;
+  }
+  
+  /* BOTTOM BACKGROUND IMAGE */
+  
+  .bottomBackground {
+    background-image: url('../images/banner_flowervase.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 50vh;
+    position: relative;
+  }
+  
+  .alignRight {
+   right: 3rem;
+  }
+  
+  /* ABOUT CSS STYLES */
+     .aboutBackground {
+      background-image: url('../images/CupFeatured.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 50vh;
+      position: relative;
+     }
+  
+     .aboutBodybackground {
+      background-image: url('../images/aboutBg.png');
+     
+     }
