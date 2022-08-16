@@ -1,8 +1,13 @@
-import { createContext } from "react";
+import { createContext, useEffect, useState } from "react";
+import { collection, getDocs, getDoc, doc } from "firebase/firestore";
+import { db } from "../utlils/Firebase";
+import { data } from "autoprefixer";
 
 const MediumContext = createContext();
 
 const MediumProvider = ({ children }) => {
+  const [posts, setPosts] = useState([]);
+
   const articles = [
     {
       id: 1,
@@ -45,10 +50,35 @@ const MediumProvider = ({ children }) => {
     },
   ];
 
+  //   GETTING POST DATA
+
+  useEffect(() => {
+    const getPost = async () => {
+      const querySnapshot = await getDocs(collection(db, "posts"));
+      setPosts(
+        querySnapshot.docs.map((doc) => {
+          return {
+            id: doc.id,
+            data: {
+              author: doc.data().author,
+              body: doc.data().body,
+              date: doc.data().date,
+              thumbnail: doc.data().imageUrl,
+              title: doc.data().title,
+            },
+          };
+        })
+      );
+    };
+
+    getPost();
+  }, []);
+
   return (
     <MediumContext.Provider
       value={{
         articles,
+        posts,
       }}
     >
       {children}

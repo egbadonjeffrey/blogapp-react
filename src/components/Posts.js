@@ -1,33 +1,41 @@
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { MediumContext } from "../context/MediumContext";
 
 const Posts = () => {
-  const { articles } = useContext(MediumContext);
+  const { posts } = useContext(MediumContext);
+
+  const [article, setArticle] = useState([]);
+
+  useEffect(() => {
+    posts.map((articles) => setArticle(articles));
+  }, [posts]);
+
+  console.log(article);
 
   return (
     <>
-      {articles.map((article) => (
-        <div key={article.id}>
-          <Link to={`/posts/` + article.id}>
+      {article?.map((post) => (
+        <div key={post.id}>
+          <Link to={`/posts/` + post.id}>
             <div className={styles.wrapper}>
               <div className={styles.postDetails}>
                 <div className={styles.postThumbnailContainer}>
                   <img
                     className={styles.postThumbnail}
-                    src={article.postThumbnail}
+                    src={post.postThumbnail}
                     alt="post Thumbnail"
                   />
                 </div>
                 <div className={styles.articleData}>
-                  <div className={styles.postTitle}>{article.Title}</div>
+                  <div className={styles.postTitle}>{post.Title}</div>
                   <div className={styles.postAuthorNameAndDate}>
-                    <p>{article.authorName}</p>
+                    <p>{post.authorName}</p>
                     <span></span>
                   </div>
 
                   <div>
-                    <p>{article.body}</p>
+                    <p>{post.body}</p>
                   </div>
                 </div>
               </div>
