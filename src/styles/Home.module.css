@@ -3,7 +3,8 @@
     background-image: url('../images/top_banner.png');
     background-repeat: no-repeat;
     background-size: cover;
-    height: 50vh;
+    height: 60vh;
+    z-index: -10;
   }
   
   /* BOTTOM BACKGROUND IMAGE */
@@ -12,11 +13,12 @@
     background-image: url('../images/banner_flowervase.png');
     background-repeat: no-repeat;
     background-size: cover;
-    height: 50vh;
+    height: 60vh;
+    z-index: -10;
   }
   
   .alignRight {
-   right: 3rem;
+   right: 0;
   }
   
   /* ABOUT CSS STYLES */

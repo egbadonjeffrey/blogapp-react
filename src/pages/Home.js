@@ -13,7 +13,6 @@ const Home = () => {
         backgroundImage={stylesSpecial.topBackground}
         alignArticle={stylesSpecial.alignLeft}
       />
-      <h1 className={styles.articlesHeader}> Articles </h1>
 
       <Posts />
 
@@ -25,15 +24,6 @@ const Home = () => {
   );
 };
 
-const styles = {
-  articlesHeader: `
-    w-[30%]
-    m-auto
-    text-center
-    text-[3rem]
-    border-b-[3px]
-    border-[#1c1c1c]
-  `,
-};
+const styles = {};
 
 export default Home;

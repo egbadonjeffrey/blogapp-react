@@ -49,16 +49,16 @@ const AboutAuthor = () => {
 
 const styles = {
   wrapper: `
-      flex
-      flex-col
       container
       m-auto
       gap-[1.5rem]
       poppins
+      my-[2rem]
   `,
   authorDetails: `
         flex
-        flex-row
+        md:flex-row
+        flex-col
         gap-[2rem]
     `,
 

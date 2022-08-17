@@ -28,16 +28,16 @@ const HeroBanner = ({ backgroundImage, alignArticle }) => {
 
 const styles = {
   backgroundImage: `
-    
+    relative
   `,
 
   article: `
     md:w-[50%]
-    w-[90%]
-    h-[90%]
     container
-    ml-[2rem]
-    px-[2rem]
+
+    mt-[2rem]
+    py-[2rem]
+    px-[1rem]
     bg-white
   `,
 

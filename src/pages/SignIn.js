@@ -1,7 +1,11 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
 import Button from "../components/Button";
+import { MediumContext } from "../context/MediumContext";
 
 const SignIn = () => {
+  const { handleGoogleAuth } = useContext(MediumContext);
+
   return (
     <div className={styles.wrapper}>
       <div className={styles.headingContainer}>
@@ -40,7 +44,7 @@ const SignIn = () => {
           buttonCustomStyle={styles.submitButton}
         />
         <div className={styles.textAndLink}>
-          <p className={styles.text}>{"Don't"} have an account? </p>
+          {/* <p className={styles.text}>{"Don't"} have an account? </p> */}
           <Link to="/signup" className={styles.Link}>
             Create Account
           </Link>
@@ -53,7 +57,7 @@ const SignIn = () => {
           value={"Login With Google"}
           isDisabled={false}
           buttonCustomStyle={styles.googleButton}
-          // clickHandler={}
+          clickHandler={() => handleGoogleAuth()}
         />
       </div>
     </div>
@@ -64,7 +68,7 @@ const styles = {
   wrapper: `
         flex 
         flex-col
-        w-[90%]
+        w-[50%]
         container
         mx-auto
         mb-[10rem]
@@ -133,7 +137,8 @@ const styles = {
 
   submitButtonLink: `
         flex
-        flex-row
+        flex-col
+        md:flex-row
         container
         w-full
         justify-between

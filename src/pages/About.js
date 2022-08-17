@@ -34,10 +34,12 @@ const About = () => {
 
 const styles = {
   wrapper: `
-    container
-    mx-auto
-    h-[100vh]
-    gap-[2rem]
+  bg-primary
+  text-white
+  w-[100%]
+  mx-auto
+  h-[100vh]
+  gap-[2rem]
   `,
 
   aboutCompany: `
@@ -50,20 +52,25 @@ const styles = {
   logo: `
     w-[40%]
     mx-auto
-    my-[2rem]
+    mb-[2rem]
   `,
 
   aboutWrapper: `
   flex
-  justify-center
+  w-[100%]
     mb-[2rem]
+  mx-auto
+  container
   `,
 
   aboutBodybackground: `
     flex
     flex-col
+    container
+    mx-auto
     gap-[2rem]
     h-[30]
+    py-[1rem]
   `,
 
   bottomDescription: `

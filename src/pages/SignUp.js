@@ -5,7 +5,7 @@ const SignUp = () => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.headingContainer}>
-        <h1 className={styles.heading}>Welcome Back!</h1>
+        <h1 className={styles.heading}>Join Us</h1>
         <h4 className={styles.heading2}>
           Sign Up to contribute to the fountain of knowledge
         </h4>
@@ -40,7 +40,7 @@ const SignUp = () => {
           buttonCustomStyle={styles.submitButton}
         />
         <div className={styles.textAndLink}>
-          <p className={styles.text}>Already have an account ? </p>
+          {/* <p className={styles.text}>Already have an account ? </p> */}
           <Link className={styles.Link} to="/signin">
             Sign in
           </Link>
@@ -64,7 +64,7 @@ const styles = {
   wrapper: `
         flex 
         flex-col
-        w-[90%]
+        w-[50%]
         container
         mx-auto
         mb-[10rem]

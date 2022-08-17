@@ -7,6 +7,14 @@ const Header = () => {
   const [mobileMenu, setMobileMenu] = useState(false);
   return (
     <div className={styles.wrapper}>
+      {mobileMenu && (
+        <div
+          className={styles.modalWrapper}
+          onClick={() => setMobileMenu(false)}
+        >
+          <MenuModal mobileMenu={mobileMenu} />
+        </div>
+      )}
       <div>
         <Logo />
       </div>
@@ -18,22 +26,13 @@ const Header = () => {
       <div className={styles.menuButton} onClick={() => setMobileMenu(true)}>
         [Menu]
       </div>
-
-      {mobileMenu && (
-        <div
-          className={styles.modalWrapper}
-          onClick={() => setMobileMenu(false)}
-        >
-          <MenuModal mobileMenu={mobileMenu} />
-        </div>
-      )}
     </div>
   );
 };
 
 const styles = {
   wrapper: `
-      container 
+      lg:container 
       flex 
       items-center 
       justify-between 
@@ -73,7 +72,6 @@ const styles = {
       h-[100vh]
       sm:w-[90%]
       sm:h-[90vh]
-          
         `,
 };
 
